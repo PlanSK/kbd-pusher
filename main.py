@@ -2,13 +2,15 @@ import keyboard
 from time import sleep
 from loguru import logger
 
-from .settings import *
+from settings import *
 
 
 def command_execute():
-    keyboard.send(COMMAND)
+    keyboard.press(COMMAND)
+    sleep(1)
+    keyboard.release(COMMAND)
     sleep(BETWEEN_ITERATIONS_DELAY)
-    logger.debug("Iteration completed")
+    logger.debug("Iteration completed.")
 
 
 if __name__ == "__main__":
