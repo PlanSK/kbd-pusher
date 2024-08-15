@@ -9,8 +9,9 @@ def command_execute():
     keyboard.press(COMMAND)
     sleep(1)
     keyboard.release(COMMAND)
+    logger.debug("Iteration completed. Wait Iteration delay.")
     sleep(BETWEEN_ITERATIONS_DELAY)
-    logger.debug("Iteration completed.")
+    logger.debug("Delay has been expired.")
 
 
 if __name__ == "__main__":
